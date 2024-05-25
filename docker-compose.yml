@@ -13,7 +13,7 @@ services:
       DB_URL: mongodb://db/vidly
     volumes:
       - ./backend:/app
-    command: migrate-mongo up && npm start 
+    command: ["sh", "backend/docker-entrypoint.sh"]
   db:
     image: mongo:4.0-xenial
     ports:

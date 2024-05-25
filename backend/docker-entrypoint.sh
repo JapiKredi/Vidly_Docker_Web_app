@@ -2,7 +2,7 @@
 
 echo "Waiting for MongoDB to start..."
 #./wait-for db:27017 
-backend/wait-for db:27017 
+wait-for db:27017 
 
 echo "Migrating the databse..."
 npm run db:up 
