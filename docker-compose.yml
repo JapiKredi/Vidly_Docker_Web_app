@@ -13,6 +13,7 @@ services:
       DB_URL: mongodb://db/vidly
     volumes:
       - ./backend:/app
+    command: migrate-mongo up && npm start 
   db:
     image: mongo:4.0-xenial
     ports:
